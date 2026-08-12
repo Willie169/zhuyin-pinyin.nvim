@@ -469,12 +469,8 @@ function M.zhuyin_key_to_pinyin(str)
 end
 
 function M.transform_selection(func)
-	local start_pos = vim.fn.getpos("'<")
-	local end_pos = vim.fn.getpos("'>")
-	local start_row = start_pos[2] - 1
-	local start_col = start_pos[3] - 1
-	local end_row = end_pos[2] - 1
-	local end_col = end_pos[3]
+    local start_row, start_col = unpack(vim.fn.getpos("'<"), 2, 3)
+    local end_row, end_col = unpack(vim.fn.getpos("'>"), 2, 3)
 	local lines = vim.api.nvim_buf_get_text(0, start_row, start_col, end_row, end_col, {})
 	local text = table.concat(lines, "\n")
 	local transformed, err = func(text)
