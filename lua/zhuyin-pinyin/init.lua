@@ -517,7 +517,7 @@ M.setup = function(opts)
 		vim.keymap.set(
 			"x",
 			M.config.mappings.zhuyin_to_pinyin,
-			zhuyin_to_pinyin_selection,
+			M.zhuyin_to_pinyin_selection,
 			{ desc = "zhuyin to pinyin" }
 		)
 	end
@@ -525,7 +525,7 @@ M.setup = function(opts)
 		vim.keymap.set(
 			"x",
 			M.config.mappings.pinyin_to_zhuyin,
-			pinyin_to_zhuyin_selection,
+			M.pinyin_to_zhuyin_selection,
 			{ desc = "pinyin to zhuyin" }
 		)
 	end
@@ -533,7 +533,7 @@ M.setup = function(opts)
 		vim.keymap.set(
 			"x",
 			M.config.mappings.zhuyin_to_zhuyin_key,
-			zhuyin_to_zhuyin_key_selection,
+			M.zhuyin_to_zhuyin_key_selection,
 			{ desc = "zhuyin to zhuyin key" }
 		)
 	end
@@ -541,7 +541,7 @@ M.setup = function(opts)
 		vim.keymap.set(
 			"x",
 			M.config.mappings.zhuyin_key_to_zhuyin,
-			zhuyin_key_to_zhuyin_selection,
+			M.zhuyin_key_to_zhuyin_selection,
 			{ desc = "zhuyin key to zhuyin" }
 		)
 	end
@@ -549,7 +549,7 @@ M.setup = function(opts)
 		vim.keymap.set(
 			"x",
 			M.config.mappings.pinyin_to_zhuyin_key,
-			pinyin_to_zhuyin_key_selection,
+			M.pinyin_to_zhuyin_key_selection,
 			{ desc = "pinyin to zhuyin key" }
 		)
 	end
@@ -557,7 +557,7 @@ M.setup = function(opts)
 		vim.keymap.set(
 			"x",
 			M.config.mappings.zhuyin_key_to_pinyin,
-			zhuyin_key_to_pinyin_selection,
+			M.zhuyin_key_to_pinyin_selection,
 			{ desc = "zhuyin key to pinyin" }
 		)
 	end
