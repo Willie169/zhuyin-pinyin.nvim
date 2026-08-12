@@ -487,27 +487,27 @@ function M.transform_selection(func)
 end
 
 function M.zhuyin_to_pinyin_selection()
-	return M.transform_selection(zhuyin_to_pinyin)
+	return M.transform_selection(M.zhuyin_to_pinyin)
 end
 
 function M.pinyin_to_zhuyin_selection()
-	return M.transform_selection(pinyin_to_zhuyin)
+	return M.transform_selection(M.pinyin_to_zhuyin)
 end
 
 function M.zhuyin_to_zhuyin_key_selection()
-	return M.transform_selection(zhuyin_to_zhuyin_key)
+	return M.transform_selection(M.zhuyin_to_zhuyin_key)
 end
 
 function M.zhuyin_key_to_zhuyin_selection()
-	return M.transform_selection(zhuyin_key_to_zhuyin)
+	return M.transform_selection(M.zhuyin_key_to_zhuyin)
 end
 
 function M.pinyin_to_zhuyin_key_selection()
-	return M.transform_selection(pinyin_to_zhuyin_key)
+	return M.transform_selection(M.pinyin_to_zhuyin_key)
 end
 
 function M.zhuyin_key_to_pinyin_selection()
-	return M.transform_selection(zhuyin_key_to_pinyin)
+	return M.transform_selection(M.zhuyin_key_to_pinyin)
 end
 
 M.setup = function(opts)
