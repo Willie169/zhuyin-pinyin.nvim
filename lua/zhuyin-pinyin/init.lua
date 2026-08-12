@@ -465,8 +465,7 @@ function M.pinyin_to_zhuyin_key(str)
 end
 
 function M.zhuyin_key_to_pinyin(str)
-	local zhuyin = M.zhuyin_key_to_zhuyin(str)
-	return M.zhuyin_to_pinyin(zhuyin)
+	return M.zhuyin_to_pinyin(M.zhuyin_key_to_zhuyin(str))
 end
 
 function M.transform_selection(func)
