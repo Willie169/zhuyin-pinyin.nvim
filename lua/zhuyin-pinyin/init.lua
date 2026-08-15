@@ -477,7 +477,7 @@ function M.transform_selection(func)
 		transformed = text
 	end
 	vim.fn.setreg("x", transformed, type)
-	vim.cmd('"xp')
+	vim.cmd('normal! "xp')
 	return text
 end
 
