@@ -471,12 +471,11 @@ end
 function M.transform_selection(func)
 	vim.cmd('normal! gv"xd')
 	local text = vim.fn.getreg("x")
-	local type = vim.fn.getregtype("x")
 	local transformed, err = func(text)
 	if not transformed then
 		transformed = text
 	end
-	vim.fn.setreg("x", transformed, type)
+	vim.fn.setreg("x", transformed, "c")
 	vim.cmd('normal! "xp')
 	return text
 end
