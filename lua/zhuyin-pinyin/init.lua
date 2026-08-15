@@ -471,10 +471,12 @@ end
 
 function M.transform_selection(func)
 	vim.cmd('normal! gv"' .. M.config.register .. "d")
-	local text = vim.fn.getreg("x")
-	vim.fn.setreg("x", table.concat(vim.tbl_map(func, vim.split(str, "\n", { plain = true })), "\n"), "c")
+	vim.fn.setreg(
+		"x",
+		table.concat(vim.tbl_map(func, vim.split(vim.fn.getreg("x"), "\n", { plain = true })), "\n"),
+		"c"
+	)
 	vim.cmd('normal! "' .. M.config.register .. "p")
-	return text
 end
 
 function M.zhuyin_to_pinyin_selection()
