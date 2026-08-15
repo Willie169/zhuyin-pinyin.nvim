@@ -476,7 +476,7 @@ function M.transform_selection(func)
 		return nil, err
 	end
 	vim.fn.setreg("x", transformed)
-	vim.cmd("p")
+	vim.cmd('"xp')
 	return text
 end
 
