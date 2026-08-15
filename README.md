@@ -17,6 +17,7 @@ return {
 Default configuration:
 ```lua
 require("zhuyin-pinyin"),setup({
+    register = "x",
 	mappings = {
 		zhuyin_to_pinyin = "<localleader>zp",
 		pinyin_to_zhuyin = "<localleader>pz",

@@ -1,6 +1,7 @@
 local M = {}
 
 M.config = {
+	register = "x",
 	mappings = {
 		zhuyin_to_pinyin = "<M-z>p",
 		pinyin_to_zhuyin = "<M-p>z",
@@ -469,14 +470,14 @@ function M.zhuyin_key_to_pinyin(str)
 end
 
 function M.transform_selection(func)
-	vim.cmd('normal! gv"xd')
+	vim.cmd('normal! gv"' .. M.config.register .. "d")
 	local text = vim.fn.getreg("x")
-	local transformed, err = func(text)
+	local transformed, err = table.concat(vim.tbl_map(func, vim.split(str, "\n", { plain = true })), "\n")
 	if not transformed then
 		transformed = text
 	end
 	vim.fn.setreg("x", transformed, "c")
-	vim.cmd('normal! "xp')
+	vim.cmd('normal! "' .. M.config.register .. "p")
 	return text
 end
 
