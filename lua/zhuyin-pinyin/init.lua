@@ -477,7 +477,7 @@ function M.transform_selection(func)
 	if not transformed then
 		return nil, err
 	end
-	vim.api.nvim_buf_set_text(0, start_row, start_col, end_row, end_col, { transformed })
+	vim.api.nvim_buf_set_text(0, start_row, start_col, end_row, end_col, vim.split(transformed, "\n", { plain = true }))
 	return text
 end
 
