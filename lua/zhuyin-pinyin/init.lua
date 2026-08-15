@@ -472,11 +472,7 @@ end
 function M.transform_selection(func)
 	vim.cmd('normal! gv"' .. M.config.register .. "d")
 	local text = vim.fn.getreg("x")
-	local transformed, err = table.concat(vim.tbl_map(func, vim.split(str, "\n", { plain = true })), "\n")
-	if not transformed then
-		transformed = text
-	end
-	vim.fn.setreg("x", transformed, "c")
+	vim.fn.setreg("x", table.concat(vim.tbl_map(func, vim.split(str, "\n", { plain = true })), "\n"), "c")
 	vim.cmd('normal! "' .. M.config.register .. "p")
 	return text
 end
