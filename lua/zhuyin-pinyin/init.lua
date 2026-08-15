@@ -2,12 +2,12 @@ local M = {}
 
 M.config = {
 	mappings = {
-		zhuyin_to_pinyin = "<localleader>zp",
-		pinyin_to_zhuyin = "<localleader>pz",
-		zhuyin_to_zhuyin_key = "<localleader>zk",
-		zhuyin_key_to_zhuyin = "<localleader>kz",
-		pinyin_to_zhuyin_key = "<localleader>pk",
-		zhuyin_key_to_pinyin = "<localleader>kp",
+		zhuyin_to_pinyin = "<M-z>p",
+		pinyin_to_zhuyin = "<M-p>z",
+		zhuyin_to_zhuyin_key = "<M-z>k",
+		zhuyin_key_to_zhuyin = "<M-k>z",
+		pinyin_to_zhuyin_key = "<M-p>k",
+		zhuyin_key_to_pinyin = "<M-k>p",
 	},
 }
 
